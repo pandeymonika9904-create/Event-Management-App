@@ -1,65 +1,134 @@
-# Event Management System (Mobile-Only)
+# 🚀 Event Management App | Flutter + Node.js
 
-A production-ready event management system with a Flutter frontend and Node.js + Express + MongoDB backend. It supports multiple roles (User, Organizer, Admin) and handles authentication, ticket booking, razorpay payments, QR generation/scanning, and an organizer dashboard.
+> 👩‍💻 Developed by **Monika Pandey**
 
-## Features Included
-1. **Frontend (Flutter)**: Modern UI with glassmorphism, gradients, and rounded corners (`google_fonts`, `provider` for state management).
-2. **Backend**: Express REST API with JWT Auth, Role-Based Access Control, Mongoose schema constraints, and mock FCM integration.
-3. **Roles Supported**: 
-   - `User`: Browse events, book tickets, check bookings, view QR token.
-   - `Organizer`: Dashboard, create events, scan QR codes using phone camera.
-   - `Admin / SuperAdmin`: Approve events/organizers, view stats.
+🚀 A full-stack mobile application for seamless event booking and management with a live deployed backend and downloadable APK.
 
-## Setup Instructions
+---
 
-### 1. Backend Setup
-1. Open a terminal and navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Make sure MongoDB is running locally on port 27017, or edit `backend/.env` with your MongoDB URI.
-4. Start the server:
-   ```bash
-   npm run dev
-   # OR
-   node server.js
-   ```
-   *The server runs on http://localhost:5000 by default.*
+## 🌟 Project Overview
 
-### 2. Frontend Setup (Flutter)
-1. Open a terminal and navigate to the frontend folder:
-   ```bash
-   cd frontend
-   ```
-2. Install packages:
-   ```bash
-   flutter pub get
-   ```
-3. Update API Base URL (if needed):
-   Edit `frontend/lib/core/constants.dart`. 
-   - If running on an **Android Emulator**, keep `10.0.2.2:5000`.
-   - If running on a **physical device or iOS Simulator**, change it to your machine's local IP (e.g., `192.168.1.5:5000`).
-4. Run the app:
-   ```bash
-   flutter run
-   ```
+The **Event Management App** is a modern full-stack mobile application designed to simplify event discovery, booking, and management.
+It provides a smooth and responsive user experience with real-time backend integration.
 
-## Sample Testing Accounts
-Run the app, go to "Sign Up" and create accounts specifying the roles `User` or `Organizer`.
-- For `Organizer`: Select the Organizer radio button. You will be redirected to the Organizer Dashboard.
-- For `User`: Select User. You will see the Home Screen feed.
+---
 
-### QR Code Testing
-1. Login as User -> Book Event -> Go to "My Tickets" -> Tap ticket -> Generates QR Code.
-2. Login as Organizer -> Dashboard -> Scan Tickets -> Use device camera to scan the user's generated QR code token.
+## ✨ Key Features
 
-## Tech Stack
-- MongoDB + Mongoose
-- Express.js Node Backend
-- Flutter (Dart) Frontend using Provider
-- Razorpay for Payments (Implementation hooks provided)
-- Mobile Scanner + QR Flutter for ticketing.
+* 🔐 User Authentication (Login & Signup)
+* 📅 Browse and Explore Events
+* 🎟️ Event Booking System
+* 💳 Payment Integration (Test Mode)
+* 📱 QR Code Ticket Generation
+* 🧾 Booking History
+* ⚡ Smooth and Responsive UI
+
+---
+
+## 🌐 Live Backend
+
+The backend is deployed and accessible here:
+
+👉 https://backend-kohl-chi-bkebo68vzc.vercel.app
+
+---
+
+## 📱 Try the App
+
+📲 Experience the Event Management App on your Android device:
+
+👉 [Download APK](https://docs.google.com/uc?export=download&id=1NiLW-6psJzXI97xMZKspfSrKstq7Uf-I)
+
+---
+
+## 🛠️ Tech Stack
+
+### 📱 Frontend
+
+* Flutter (Dart)
+
+### 🌐 Backend
+
+* Node.js
+* Express.js
+
+### 🗄️ Database
+
+* MongoDB
+
+---
+
+## 📂 Project Structure
+
+```bash
+Event-Management-App/
+│
+├── frontend/        # Flutter Application
+├── backend/         # Node.js Backend (API)
+└── README.md
+```
+
+---
+
+## ⚙️ Setup & Installation
+
+### 🔹 Clone Repository
+
+```bash
+git clone https://github.com/pandeymonika9904-create/Event-Management-App.git
+cd Event-Management-App
+```
+
+---
+
+### 🔹 Run Backend (Local)
+
+```bash
+cd backend
+npm install
+node server.js
+```
+
+---
+
+### 🔹 Run Frontend
+
+```bash
+cd frontend
+flutter pub get
+flutter run
+```
+
+---
+
+## 🔧 Configuration
+
+Make sure to update API base URL in Flutter:
+
+```dart
+https://backend-kohl-chi-bkebo68vzc.vercel.app
+```
+
+---
+
+## 🚀 Future Enhancements
+
+* 🔔 Push Notifications
+* ❤️ Wishlist Feature
+* ⭐ Ratings & Reviews
+* 📲 Play Store Deployment
+
+---
+
+## 👩‍💻 About the Developer
+
+Hi, I’m **Monika Pandey**, a passionate developer focused on building modern, scalable, and user-friendly applications using Flutter and full-stack technologies.
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub!
+
+---
+
