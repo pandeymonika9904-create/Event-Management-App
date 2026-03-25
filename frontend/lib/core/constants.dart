@@ -2,6 +2,9 @@ import 'package:flutter/foundation.dart';
 
 class AppConstants {
   static String get baseUrl {
+    // For Production (after Render deployment):
+    // return 'https://your-render-app-url.onrender.com/api';
+    
     if (kIsWeb) {
       return 'http://localhost:5000/api';
     }

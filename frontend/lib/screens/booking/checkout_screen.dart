@@ -110,7 +110,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         'description': 'Booking for ${widget.event.title}',
         'prefill': {
           'contact': '9876543210',
-          'email': 'test@razorpay.com'
+          'email': 'pandeymonika9904@gmail.com'
         }
       };
 

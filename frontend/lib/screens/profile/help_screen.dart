@@ -22,11 +22,11 @@ class HelpScreen extends StatelessWidget {
           ListTile(title: Text('Refund policy')),
           ListTile(
             title: Text('Contact support'),
-            subtitle: Text('support@example.com'),
+            subtitle: Text('pandeymonika9904@gmail.com'),
           ),
           SizedBox(height: 24),
           Text(
-            'Need more help? Send an email to support@example.com or call +91 99999 99999.',
+            'Need more help? Send an email to pandeymonika9904@gmail.com or call +91 99999 99999.',
             style: TextStyle(fontSize: 14, color: Colors.grey),
           ),
         ],

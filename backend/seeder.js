@@ -23,7 +23,7 @@ const importData = async () => {
     // Create Demo Organizer
     const orgUser = await User.create({
       name: 'Tech Events Inc',
-      email: 'organizer@demo.com',
+      email: 'pandeymonika9904@gmail.com',
       password: 'password123',
       role: 'Organizer',
       kycStatus: 'Approved'
