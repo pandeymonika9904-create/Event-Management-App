@@ -40,9 +40,14 @@ mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log('MongoDB Connected');
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    if (process.env.NODE_ENV !== 'production') {
+      app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    }
   })
   .catch((err) => {
     console.error(`Error connecting to MongoDB: ${err.message}`);
-    process.exit(1);
+    // Do not exit process in serverless environment
+    if (process.env.NODE_ENV !== 'production') process.exit(1);
   });
+
+module.exports = app;
