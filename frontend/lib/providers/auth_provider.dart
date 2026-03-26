@@ -24,7 +24,7 @@ class AuthProvider with ChangeNotifier {
             headers: {'Content-Type': 'application/json'},
             body: jsonEncode({'email': email, 'password': password}),
           )
-          .timeout(const Duration(seconds: 10));
+          .timeout(const Duration(seconds: 45));
 
       final data = jsonDecode(response.body);
 
@@ -61,7 +61,7 @@ class AuthProvider with ChangeNotifier {
               'role': role,
             }),
           )
-          .timeout(const Duration(seconds: 10));
+          .timeout(const Duration(seconds: 45));
 
       final data = jsonDecode(response.body);
 
