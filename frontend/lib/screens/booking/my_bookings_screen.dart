@@ -138,7 +138,7 @@ class _MyBookingsScreenState extends State<MyBookingsScreen> {
   }
 
   Widget _buildBookingCard(Booking booking) {
-    final isPaid = booking.paymentStatus == 'Paid';
+    final isPaid = booking.paymentStatus == 'Completed' || booking.paymentStatus == 'Paid';
     
     return GestureDetector(
       onTap: () {
