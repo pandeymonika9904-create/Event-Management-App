@@ -37,7 +37,7 @@ The backend is deployed and accessible here:
 
 📲 Experience the Event Management App on your Android device:
 
-👉 [Download APK](https://docs.google.com/uc?export=download&id=1NiLW-6psJzXI97xMZKspfSrKstq7Uf-I)
+👉 [Download APK](https://github.com/pandeymonika9904-create/Event-Management-App/raw/main/releases/app-release.apk)
 
 ---
 
