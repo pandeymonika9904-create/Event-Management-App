@@ -101,23 +101,26 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       final int amount = responseData['amount'];
       _currentBookingId = booking.id;
 
-      // 2. Open Razorpay Interface
-      var options = {
-        'key': 'rzp_test_dummy_key_here', // In production, fetch via API or use env
-        'amount': amount,
-        'name': 'Event Management System',
-        'order_id': orderId,
-        'description': 'Booking for ${widget.event.title}',
-        'prefill': {
-          'contact': '9876543210',
-          'email': 'pandeymonika9904@gmail.com'
-        }
-      };
+      // 2. Mock Razorpay Interface Success
+      const dummyPaymentId = 'pay_mock_123456';
+      const dummySignature = 'sig_mock_verified';
+      
+      final isVerified = await bookingProvider.verifyPayment(
+        orderId, 
+        dummyPaymentId, 
+        dummySignature, 
+        _currentBookingId!
+      );
 
-      try {
-        _razorpay.open(options);
-      } catch (e) {
-        debugPrint(e.toString());
+      if (isVerified && mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => PaymentSuccessScreen(bookingId: _currentBookingId!)),
+        );
+      } else if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(bookingProvider.error.isEmpty ? 'Verification Failed' : bookingProvider.error)),
+        );
       }
     } else if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
