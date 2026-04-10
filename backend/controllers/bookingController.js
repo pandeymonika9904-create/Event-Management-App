@@ -85,7 +85,7 @@ const verifyPayment = async (req, res) => {
       const booking = await Booking.findById(bookingId);
       if (!booking) return res.status(404).json({ message: 'Booking not found' });
 
-      booking.paymentStatus = 'Completed';
+      booking.paymentStatus = 'Paid';
       booking.qrCodeToken = crypto.randomUUID(); // Generate QR code token
       await booking.save();
 
