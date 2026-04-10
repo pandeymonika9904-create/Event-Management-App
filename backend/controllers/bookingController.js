@@ -48,6 +48,7 @@ const createBooking = async (req, res) => {
       quantity,
       totalPrice,
       paymentStatus: 'Pending',
+      qrCodeToken: `pending_${crypto.randomUUID()}`
     });
 
     const createdBooking = await booking.save();
