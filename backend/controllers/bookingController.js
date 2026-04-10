@@ -52,6 +52,7 @@ const createBooking = async (req, res) => {
     });
 
     const createdBooking = await booking.save();
+    await createdBooking.populate('event');
     
     // We update sold count after payment success usually
     res.status(201).json({
